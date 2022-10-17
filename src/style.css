@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.page-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #222D33;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+}
+.header-logo {
+  width: 160px;
+}
+.header-menu {
+  display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  height: 100%;
+  gap: 1rem;
+  padding: 2rem;
+  -webkit-animation: sliding 200ms ease-out, fading 200ms ease-in-out;
+          animation: sliding 200ms ease-out, fading 200ms ease-in-out;
+}
+.dropdown-menu .navbar-item {
+  color: #222D33;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.dropdown-menu .navbar-item:hover, .dropdown-menu .navbar-item.active {
+  color: #8A949A;
+}
+.dropdown-menu.picture-modal {
+  -webkit-animation: fading 200ms ease-in-out;
+          animation: fading 200ms ease-in-out;
+}
+
+.about.page-content {
+  flex-direction: row;
+  gap: 2.5rem;
+}
+.about img {
+  height: auto;
+  width: 100%;
+  max-width: 360px;
+  align-self: center;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.about-text p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+.about-text a, .about-text a:visited {
+  color: #000;
+}
+.about-text a:hover, .about-text a:visited:hover {
+  color: #819de0;
+}
+
+.section {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.section-icon {
+  height: 40px;
+}
+.section-text {
+  max-width: 70ch;
+}
+.section.contacts {
+  align-items: center;
+  color: #000;
+}
+.section.contacts:hover {
+  color: #8A949A;
+}
+
+a.contacts {
+  text-decoration: none;
+  color: #000;
+}
+a.contacts.mail {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  font-family: "Nunito Sans", sans-serif;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-item {
+  color: #222D33;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-item:hover, .navbar-item.active {
+  color: #8A949A;
+}
+
+.artworks {
+  position: relative;
+}
+.artworks-header {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.artworks.page {
+  margin-top: -3rem;
+}
+.artworks.navbar {
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 0.8em;
+  padding: 1rem 0;
+}
+.artworks .navbar-item:hover {
+  cursor: pointer;
+}
+
+.description {
+  margin: 0 0 0.25em;
+  font-weight: 300;
+  text-align: center;
+  font-size: 12px;
+}
+.description-title {
+  font-size: 20px;
+}
+.description-margin {
+  margin-bottom: 0.5em;
+}
+
+.picture-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 2em;
+}
+.picture-info:hover, .picture-info:focus {
+  -webkit-animation: fading 150ms ease-in-out 1;
+          animation: fading 150ms ease-in-out 1;
+  opacity: 1;
+  cursor: zoom-in;
+}
+.picture-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.picture-modal-content {
+  position: absolute;
+  z-index: 201;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  background-color: #fff;
+  padding: 1.5em;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.picture-modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.25em;
+}
+.picture-modal-content .close:hover {
+  cursor: pointer;
+}
+.picture-modal-media {
+  display: flex;
+}
+.picture-modal img {
+  max-height: calc(90vh - 3em);
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.picture-modal-textarea {
+  flex-basis: 20ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
+.picture-modal-textarea p {
+  text-align: left;
+}
+
+.badge {
+  position: absolute;
+  padding: 0.4em 0.8em 0.6em;
+  height: 8px;
+  z-index: 60;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(120, 120, 120, 0.5);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sliding {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes sliding {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  .about.page-content {
+    flex-direction: column;
+  }
+  .about.page-content img {
+    width: 100%;
+  }
+  .picture-modal-content {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .picture-modal-content .close {
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+}
+@media (max-width: 620px) {
+  .header-menu {
+    display: block;
+  }
+  .header .navbar {
+    display: none;
+  }
+  .artworks.navbar {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */

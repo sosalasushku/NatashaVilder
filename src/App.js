@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom'
+
+import Header from './components/Header'
+import About from './components/About'
+import Artworks from './components/Artworks'
+import Delivery from './components/Delivery'
+import Contacts from './components/Contacts'
+
+import pictures from './data/pictures'
+
 
 function App() {
+
+  const [tech, setTech] = useState('watercolor')
+  const [activeLink, setActiveLink] = useState('about')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        />
+        <Routes>
+          {/* <Route exact path='/' element={<Navigate to="/about" />} /> */}
+          <Route path='/' element={<About />} />
+          <Route path='/artworks' element={<Artworks
+            tech={tech}
+            setTech={setTech}
+            pictures={pictures}
+          />} />
+          <Route path='/delivery' element={<Delivery />} />
+          <Route path='/contacts' element={<Contacts />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
