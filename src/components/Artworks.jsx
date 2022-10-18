@@ -52,7 +52,7 @@ const Artworks = ({ tech, setTech, pictures }) => {
         <div className='container'>
           <ImageList
             variant='masonry'
-            cols={width > 768 ? 3 : width > 400 ? 2 : 1}
+            cols={width > 768 ? 3 : width > 500 ? 2 : 1}
             gap={width > 880 ? 48 : 28}
           >
             {pictures.filter(pic => pic.technique.includes(tech)).map(pic => <Picture pic={pic} />)}

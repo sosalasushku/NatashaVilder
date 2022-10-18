@@ -38,7 +38,8 @@ const Header = ({ activeLink, setActiveLink }) => {
             <div className='container'>
                 <div className='header-content'>
                     <div className='header-logo'>
-                        <img src={TitleLogo} alt='Natasha Vilder' />
+                        <div className='header-logo-title'>Natasha Vilder</div>
+                        <div className='header-logo-subtitle'>watercolor artist</div>
                     </div>
                     <div className='header navbar'>
                         {
@@ -54,7 +55,7 @@ const Header = ({ activeLink, setActiveLink }) => {
                         }
                     </div>
                     <div className='header-menu'>
-                        <MenuIcon fontSize='large' onClick={() => setOpenMenu(true)} />
+                        <MenuIcon onClick={() => setOpenMenu(true)} />
                         {
                             openMenu ?
                                 <div className='dropdown-menu picture-modal' onClick={() => setOpenMenu(false)}>

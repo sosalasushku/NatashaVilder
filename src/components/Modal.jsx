@@ -1,15 +1,12 @@
 import React from 'react'
 
-// onClick={e => e.stopPropagation()}
-
 const Modal = ({ pic, setOpenModal }) => {
   return (
     <div className='picture-modal' onClick={() => setOpenModal(false)} >
-      <div className='picture-modal-content'>
+      <div className='picture-modal-content' onClick={e => e.stopPropagation()}>
         <div className='picture-modal-media'>
           <img src={pic.imgFull} alt={pic.title} />
         </div>
-
 
         <span class='close' onClick={() => setOpenModal(false)}>&times;</span>
 

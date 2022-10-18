@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -32,9 +32,9 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  background-color: #222D33;
+  background-color: #000;
   color: #fff;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
 }
 .header-content {
   width: 100%;
@@ -45,7 +45,21 @@ body {
   align-items: center;
 }
 .header-logo {
-  width: 160px;
+  font-family: "Montserrat", sans-serif;
+}
+.header-logo-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.header-logo-subtitle {
+  color: #8A949A;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.7ch;
+  margin: 0;
 }
 .header-menu {
   display: none;
@@ -65,10 +79,11 @@ body {
           animation: sliding 200ms ease-out, fading 200ms ease-in-out;
 }
 .dropdown-menu .navbar-item {
-  color: #222D33;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 .dropdown-menu .navbar-item:hover, .dropdown-menu .navbar-item.active {
   color: #8A949A;
@@ -101,7 +116,8 @@ body {
   color: #000;
 }
 .about-text a:hover, .about-text a:visited:hover {
-  color: #819de0;
+  color: #8A949A;
+  text-decoration: none;
 }
 
 .section {
@@ -118,9 +134,10 @@ body {
 .section.contacts {
   align-items: center;
   color: #000;
+  text-decoration: underline;
 }
 .section.contacts:hover {
-  color: #8A949A;
+  text-decoration: none;
 }
 
 a.contacts {
@@ -136,17 +153,18 @@ a.contacts.mail {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  font-family: "Nunito Sans", sans-serif;
 }
 .navbar a {
   color: #fff;
   text-decoration: none;
 }
 .navbar-item {
-  color: #222D33;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 .navbar-item:hover, .navbar-item.active {
   color: #8A949A;
@@ -171,8 +189,10 @@ a.contacts.mail {
 .artworks.navbar {
   width: 100%;
   justify-content: flex-end;
-  font-size: 0.8em;
   padding: 1rem 0;
+}
+.artworks .navbar-item {
+  font-size: 0.8rem;
 }
 .artworks .navbar-item:hover {
   cursor: pointer;
@@ -209,8 +229,12 @@ a.contacts.mail {
   justify-content: center;
   box-sizing: border-box;
   padding: 0 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.picture-info:hover, .picture-info:focus {
+.picture-info:hover, .picture-info:active {
   -webkit-animation: fading 150ms ease-in-out 1;
           animation: fading 150ms ease-in-out 1;
   opacity: 1;
@@ -321,7 +345,18 @@ a.contacts.mail {
 @media (max-width: 768px) {
   .header {
     justify-content: center;
+  }
+  .header > .navbar-item {
     font-size: 0.8rem;
+  }
+  .header-logo-title {
+    font-size: 1.6rem;
+  }
+  .header-logo-subtitle {
+    font-size: 0.6rem;
+  }
+  .artworks > .navbar-item {
+    font-size: 0.7rem;
   }
   .about.page-content {
     flex-direction: column;
@@ -340,7 +375,7 @@ a.contacts.mail {
     right: 0.4rem;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 712px) {
   .header-menu {
     display: block;
   }
@@ -349,5 +384,12 @@ a.contacts.mail {
   }
   .artworks.navbar {
     justify-content: center;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  pic-info:hover {
+    -webkit-animation: fading 150ms ease-in-out 1;
+            animation: fading 150ms ease-in-out 1;
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */

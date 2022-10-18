@@ -22,8 +22,8 @@ const About = () => {
               а иногда работы в духе эстетики ебеней.
             </p>
             <p>
-              Являюсь автором youtube-канала "<a href='https://www.youtube.com/channel/UCEx05pPX71EaAh3KIrqxHOA' target='_blank' className='about page-content-link'>искусство лить воду</a>"
-            и телеграм-канала "<a href='https://t.me/celuleum' target='_blank' className='about page-content-link'>целулеум</a>", посвящённых художественным материалам.
+              Являюсь автором каналов на <a href='https://www.youtube.com/channel/UCEx05pPX71EaAh3KIrqxHOA' target='_blank' className='about page-content-link'>ютубе</a> и
+              в <a href='https://t.me/celuleum' target='_blank' className='about page-content-link'>телеграме</a>, посвящённых художественным материалам.
             </p>
           </div>
         </div>
